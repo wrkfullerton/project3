@@ -1,0 +1,87 @@
+.userauth__modal {
+    display: flex !important;
+    flex-direction: row !important;
+    object-fit: contain;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly !important;
+    
+}
+
+.userauth__signUp {
+    display: flex !important;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.userauth__signIn {
+    display: flex !important;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.userauth__loginContainer {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    
+}
+
+
+
+.userauth__buttonSignOut {
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 35px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: white;
+    object-fit: contain;
+}
+
+
+
+.userauth__buttonSignIn {
+    border: none;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 35px;
+    background-color: cornflowerblue;
+    color: white;
+    
+}
+
+.userauth__buttonSignUp {
+    border: none;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 35px;
+    background-color: lightgray;
+    color: gray;    
+}
+
+
+.userauth__signUpButton
+{
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 700;
+}
+.userauth__text {
+    
+    display: block;
+    padding: 20px;
+    max-width: 100px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
