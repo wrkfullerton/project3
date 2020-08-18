@@ -89,9 +89,9 @@ const signIn = (event) => {
                 <div style={modalStyle} className={classes.paper}>
                     <form className="userauth__signUp">
                             <center>
-                                <h2>TutorNet</h2>
+                                <h2 className="userauth__text">TutorNet</h2>
                             </center>
-                            
+
                             <Input 
                             type="text"
                             placeholder="Username"

@@ -11,14 +11,12 @@
 
 .userauth__signUp {
     display: flex !important;
-    flex-direction: column !important;
     object-fit: contain;
     padding: 20px;
 }
 
 .userauth__signIn {
     display: flex !important;
-    flex-direction: column !important;
     object-fit: contain;
     padding: 20px;
 }
@@ -77,7 +75,7 @@
     color: white;
     font-weight: 700;
 }
-.userauth__Image {
+.userauth__text {
     
     display: block;
     padding: 20px;
