@@ -1,0 +1,19 @@
+.header {
+    
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    top: 0;
+    z-index: 1;
+    
+  }
+  
+  .header__text {
+    padding: 20px;
+    text-align: center;
+    color: gray;
+    
+  }
+
+  .header__icon {
+      padding: 20px;
+  }
