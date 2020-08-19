@@ -20,7 +20,7 @@ VALUES
 
 ("Luke Duvall", "Science", "l.duvall@tutor.net"),
 
-("Celeste Guzman", "Spanish", "c.guzman@tutor.net"),
+("Celeste Guzman", "Spanish", "c.guzman@tutor.net")
 
 
 INSERT INTO students (student, subject, email)
@@ -29,7 +29,7 @@ VALUES
 
 ("Jack Davis", "", "j.davis@tutor.net"),
 
-("")
+("Daniel Fox", "", "d.fox@tutor.net"),
 
 
 
