@@ -27,6 +27,11 @@ INSERT INTO students (student, subject, email)
 
 VALUES
 
+("Jack Davis", "", "j.davis@tutor.net"),
+
+("")
+
+
 
 
 

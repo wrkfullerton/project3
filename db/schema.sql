@@ -13,6 +13,7 @@ PRIMARY KEY (id)
 CREATE TABLE students (
 id INT NOT NULL AUTO_INCREMENT,
 student VARCHAR(50),
+-- grade INT,
 subject VARCHAR(50),
 email VARCHAR(50),
 PRIMARY KEY (id)
