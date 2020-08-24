@@ -1,0 +1,45 @@
+.main {
+    background-image: url();
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.carbon {
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.uaschools.org%2FBuildingOurFuture.aspx&psig=AOvVaw3pfDKp-K_3WB-QgsZJqaD0&ust=1598194602568000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjXoYCJr-sCFQAAAAAdAAAAABAD);
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: cover;
+
+}
+
+.jumbotron {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .85;
+}
+
+.form-group {
+    font-weight: bold;
+    opacity: .8;
+}
+
+.card {
+    opacity: .8;
+}
+
+.bold {
+    color: green;
+    font-size: larger;
+}
+
+.fa-fire {
+    color: red;
+}
+
+.fa-recycle {
+    color: blue;
+}
+
+.fa-tree {
+    color: darkgreen;
+}
