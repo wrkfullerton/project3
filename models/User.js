@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     profile: {
-      type: DataTypes
+      type: DataTypes.STRING
     },
     grade: {
       type: DataTypes.STRING
