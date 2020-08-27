@@ -7,6 +7,7 @@ export const register = newUser => {
       last_name: newUser.last_name,
       email: newUser.email,
       password: newUser.password,
+      profile: newUser.profile,
       grade: newUser.grade,
       subject: newUser.subject
     })
