@@ -111,10 +111,10 @@ class Register extends Component {
                 <div className="form-group">
                   <label htmlFor="password">Are you a teacher or student?:</label>
                   <input
-                    type="password"
+                    type="text"
                     className="form-control"
                     name="profile"
-                    placeholder="Password"
+                    placeholder="Teacher or student"
                     value={this.state.profile}
                     onChange={this.onChange}
                   />
