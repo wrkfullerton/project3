@@ -1,39 +1,39 @@
 USE userDB;
 
-INSERT INTO tutors (teacher, grade, subject, email)
+INSERT INTO users (id, first_name, last_name, email, password, profile, grade, subject, created)
 
 VALUES 
 
-("Vidal Salazar", "High", "Math", "v.salazar@tutor.net"),
+("0", "Vidal", "Salazar", "v.salazar@tutor.net","password100", "teacher", "High", "math", now()),
 
-("James Martinez", "Middle" "Math", "j.martinez@tutor.net"),
+("0", "James", "Martinez", "j.martinez@tutor.net", "password101", "teacher", "Middle", "math", now()),
 
-("Robert Vera", "Elementary", "Math", "r.vera@tutor.net"),
+("0", "Robert", "Vera", "r.vera@tutor.net", "password102", "teacher", "Elementary", "math", now()),
 
-("Jack Davis", "High", "History", "j.davis@tutor.net"),
+("0", "Jack", "Davis", "j.davis@tutor.net", "password103", "teacher", "High", "history", now()),
 
-("Brandon Rodriguez", "Middle", "History", "b.rodriguez@tutor.net"),
+("0", "Brandon", "Rodriguez", "b.rodriguez@tutor.net", "password104", "teacher", "Middle", "History", now()),
 
-("Kyle Mendoza", "Elementary", "History", "k.mendoza@tutor.net"),
+("0", "Kyle", "Mendoza", "k.mendoza@tutor.net", "password105", "teacher", "Elementary", "History", now()),
 
-("Andrea Pellecer", "High", "English", "a.pellecer@tutor.net"),
+("0", "Andrea", "Pellecer", "a.pellecer@tutor.net", "password105", "teacher", "High", "English", now()),
 
-("Desiree Aranda", "Middle", "English", "d.aranda@tutor.net"),
+("0", "Desiree", "Aranda", "d.aranda@tutor.net", "password106", "teacher", "Middle", "English", now()),
 
-("Fernando Penaloza" "Elementary", "English", "f.penaloza@tutor.net",
+("0", "Fernando", "Penaloza", "f.penaloza@tutor.net", "password107", "teacher", "Elementary", "English", now()),
 
-("Nathan Henderson", "High", "Science", "n.henderson@tutor.net"),
+("0", "Nathan", "Henderson", "n.henderson@tutor.net", "password108", "teacher", "High", "Science", now()),
 
-("Luke Duvall", "Middle", "Science", "l.duvall@tutor.net"),
+("0", "Luke", "Duvall", "l.duvall@tutor.net", "password109", "teacher", "Middle", "Science", now()),
 
-("Ben Aguilar", "Elementary", "Science", "b.aguilar@tutor.net"),
+("0", "Ben", "Aguilar", "b.aguilar@tutor.net", "password110", "teacher", "Elementary", "Science", now()),
 
-("Celeste Guzman", "Middle", "Spanish", "c.guzman@tutor.net")
+("0", "Celeste", "Guzman", "c.guzman@tutor.net", "password111", "teacher", "Middle", "Spanish", now())
 
 
-INSERT INTO students (student, grade, subject, email)
+-- INSERT INTO students (student, grade, subject, email)
 
-VALUES
+-- VALUES
 
 
 
