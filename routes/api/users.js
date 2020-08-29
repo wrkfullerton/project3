@@ -93,3 +93,14 @@ router.get('/profile', (req, res) => {
 })
 
 module.exports = router;
+
+//post for user table to populate page?
+//need to change "api/view-menu" to page that will populate teacher database
+
+app.get("/api/view-menu", (req, res) => {
+  db.Users.findAll()
+    .then(menu => {
+      res.send(menu)
+    })
+    .catch(err => console.log(err));
+});
