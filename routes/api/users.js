@@ -19,7 +19,6 @@ router.post('/register', (req, res) => {
     profile: req.body.profile,
     grade: req.body.grade,
     subject: req.body.subject
-
   }
 
   User.findOne({
