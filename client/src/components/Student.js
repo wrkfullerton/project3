@@ -113,7 +113,7 @@ class Student extends Component {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="password">Are you a Tutor or student?</label>
+                                    <label htmlFor="profile">Are you a Tutor or student?</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -125,7 +125,7 @@ class Student extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password">Grade:</label>
+                                    <label htmlFor="grade">Grade:</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -137,7 +137,7 @@ class Student extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password">Student Subject:</label>
+                                    <label htmlFor="subject">Student Subject:</label>
                                     <input
                                         type="text"
                                         className="form-control"
