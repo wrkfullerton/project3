@@ -9,7 +9,50 @@ router.use(cors());
 
 process.env.SECRET_KEY = 'secret';
 
-router.post('/register', (req, res) => {
+router.post('/tutor', (req, res) => {
+  const today = new Date()
+  const userData = {
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    password: req.body.password,
+    profile: req.body.profile,
+    grade: req.body.grade,
+    subject: req.body.subject
+
+  }
+
+  User.findOne({
+    where: {
+      email: req.body.email
+    }
+  })
+    //TODO bcrypt
+    .then(user => {
+      if (!user) {
+        bcrypt.hash(req.body.password, 10, (err, hash) => {
+          userData.password = hash
+          User.create(userData)
+            .then(user => {
+              res.json({ status: user.email + 'Registered!' })
+            })
+            .catch(err => {
+              res.send('error: ' + err);
+            })
+        })
+      } else {
+        res.json({ error: 'User already exists' });
+      }
+    })
+    .catch(err => {
+      res.send('error: ' + err);
+    })
+})
+
+
+
+
+router.post('/student', (req, res) => {
   const today = new Date()
   const userData = {
     first_name: req.body.first_name,
