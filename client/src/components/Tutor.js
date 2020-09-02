@@ -112,7 +112,7 @@ class Tutor extends Component {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="password">Are you a Tutor or student?</label>
+                                    <label htmlFor="profile">Are you a Tutor or student?</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -123,7 +123,7 @@ class Tutor extends Component {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="password">Grade:</label>
+                                    <label htmlFor="grage">Grade:</label>
                                     <input
                                         type="text"
                                         className="form-control"
@@ -135,7 +135,7 @@ class Tutor extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password">Tutor Subject:</label>
+                                    <label htmlFor="subject">Tutor Subject:</label>
                                     <input
                                         type="text"
                                         className="form-control"
