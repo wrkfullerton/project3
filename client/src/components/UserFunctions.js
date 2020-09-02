@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 export const registerS = newUser => {
   return axios
     .post('/api/users/student', {
@@ -7,7 +6,6 @@ export const registerS = newUser => {
       last_name: newUser.last_name,
       email: newUser.email,
       password: newUser.password,
-      profile: newUser.profile,
       grade: newUser.grade,
       subject: newUser.subject
     })
@@ -23,7 +21,6 @@ export const registerT = newUser => {
       last_name: newUser.last_name,
       email: newUser.email,
       password: newUser.password,
-      profile: newUser.profile,
       grade: newUser.grade,
       subject: newUser.subject
     })
@@ -31,6 +28,7 @@ export const registerT = newUser => {
       console.log('Registered');
     })
 }
+
 export const login = user => {
   return axios
     .post('/api/users/login', {
@@ -45,7 +43,6 @@ export const login = user => {
       console.log(err)
     });
 }
-
 
 export const profileForm = newRequest => {
   return axios
