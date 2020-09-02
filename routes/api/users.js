@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
@@ -135,4 +137,20 @@ router.get('/profile', (req, res) => {
     })
 })
 
+
+//router get call
+
+// router.get('/user-list', function (req, res, next) {
+//   var sql = 'SELECT * FROM users';
+//   db.query(sql, function (err, data, fields) {
+//     if (err) throw err;
+//     res.render('user-list', { title: 'User List', userData: data });
+//   });
+// });
+
+
 module.exports = router;
+
+
+
+
