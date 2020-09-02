@@ -10,7 +10,6 @@ class Student extends Component {
             last_name: '',
             email: '',
             password: '',
-            profile: '',
             grade: '',
             subject: '',
             errors: {},
@@ -47,7 +46,6 @@ class Student extends Component {
             last_name: this.state.last_name,
             email: this.state.email,
             password: this.state.password,
-            profile: this.state.profile,
             grade: this.state.grade,
             subject: this.state.subject
 
@@ -113,24 +111,12 @@ class Student extends Component {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="password">Are you a Tutor or student?</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="profile"
-                                        placeholder="Tutor or student"
-                                        value={this.state.profile}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-
-                                <div className="form-group">
                                     <label htmlFor="password">Grade:</label>
                                     <input
                                         type="text"
                                         className="form-control"
                                         name="grade"
-                                        placeholder="middel school"
+                                        placeholder="Middle School"
                                         value={this.state.grade}
                                         onChange={this.onChange}
                                     />
@@ -156,7 +142,7 @@ class Student extends Component {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
 
         )
     }

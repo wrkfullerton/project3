@@ -1,3 +1,9 @@
+.landing__section {
+    display: flex;
+    padding: 30px;   
+}
+
+
 .main {
     background-image: url();
     min-height: 100vh;

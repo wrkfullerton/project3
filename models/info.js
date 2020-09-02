@@ -7,26 +7,8 @@ module.exports = function (sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    email: {
-      type: DataTypes.STRING
-    },
-    tutor: {
-      type: DataTypes.STRING
-    },
-    student: {
-      type: DataTypes.STRING
-    },
-    grade: {
-      type: DataTypes.STRING
-    },
-    level: {
-      type: DataTypes.STRING
-    },
     price: {
       type: DataTypes.INTEGER
-    },
-    subject: {
-      type: DataTypes.STRING
     },
     created: {
       type: DataTypes.DATE,
