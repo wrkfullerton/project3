@@ -46,6 +46,7 @@ export const login = user => {
     });
 }
 
+
 export const profileForm = newRequest => {
   return axios
     .post('/api/profiles/data', {
@@ -53,13 +54,12 @@ export const profileForm = newRequest => {
       tutor: newRequest.tutor,
       student: newRequest.student,
       grade: newRequest.grade,
-      profile: newRequest.profile,
       level: newRequest.level,
       price: newRequest.price,
       subject: newRequest.subject
     })
     .then(response => {
-      console.log('hit the backend for pvWatts')
+      console.log('hit the backend')
     })
     .catch(err => {
       console.log(err)
