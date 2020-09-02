@@ -67,7 +67,7 @@ class Login extends Component {
                 <button
                   type="submit"
                   className="btn btn-lg btn-primary btn-block"
-                >
+                  disabled={!this.state.email || !this.state.password}>
                   Sign in
                     </button>
               </form>
