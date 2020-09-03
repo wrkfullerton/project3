@@ -53,7 +53,8 @@ class Student extends Component {
         // register user on submit and send to the login page
         registerS(newUser).then(res => {
             this.props.history.push(`/login`)
-        })
+
+        }).catch(({ response }) => console.log(response.data))
     }
 
     render() {
