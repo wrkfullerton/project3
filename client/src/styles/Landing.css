@@ -4,6 +4,11 @@
 }
 
 
+.landing__cardLink {
+    text-decoration: none;
+    color: black;
+}
+
 .main {
     background-image: url();
     min-height: 100vh;
