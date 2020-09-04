@@ -25,7 +25,8 @@ mysqlConnection.connect((err) => {
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}..`));
 
-//Creating GET Router to fetch all the learner details from the MySQL Database
+//Creating GET Router to fetch all the Users details from the MySQL Database
+
 app.get('/users', (req, res) => {
     mysqlConnection.query('SELECT * FROM Users', (err, rows, fields) => {
         if (!err)
@@ -34,6 +35,19 @@ app.get('/users', (req, res) => {
             console.log(err);
     })
 });
+
+
+//Router to GET specific user detail from the MySQL database
+
+// app.get('/users/profile', (req, res) => {
+//     mysqlConnection.query('SELECT * FROM Users WHERE user_profile = ?', [req.params.profile], (err, rows, fields) => {
+//         if (!err)
+//             res.send(rows);
+//         else
+//             console.log(err);
+//     })
+// });
+
 
 
 
