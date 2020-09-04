@@ -39,9 +39,6 @@ export const login = user => {
       localStorage.setItem('usertoken', response.data)
       return response.data
     })
-    .catch(err => {
-      console.log(err)
-    });
 }
 
 export const profileForm = newRequest => {
