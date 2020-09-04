@@ -24,7 +24,7 @@ class Profile extends Component {
 
   render() {
     return (
-        <div className="main">
+        <div className="profile">
             <div className="row">
                 <div className="container">
                     <div className="jumbotron mt-5">

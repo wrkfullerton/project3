@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Landing from './components/Landing';
 import Login from './components/Login';
+import ProfilePage from "./components/ProfilePage";
+import ContactPage from "./components/ContactPage";
 import Register from './components/Register';
 import Profile from './components/Profile';
 import Dashboard from './components/Dashboard';
@@ -26,11 +28,14 @@ class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/profilepage" component={ProfilePage} />
+                    <Route exact path="/tutor/:tutor" component={ContactPage}/>
                     <Route exact path="/dashboard" component={Dashboard} />
                     <Route exact path="/matches" component={Matches} />
                     <Route exact path="/student" component={Student} />
                     <Route exact path="/tutor" component={Tutor} />
                     <Route exact path="/search" component={SearchPage} />
+                    
                     <Footer />
                 </div>
 
