@@ -30,7 +30,7 @@ class Login extends Component {
       if (res) {
         this.props.history.push(`/`);
       }
-    })
+    }).catch(({ response }) => alert(response.data.message))
   }
 
   render() {
