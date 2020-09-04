@@ -1,9 +1,25 @@
-var express = require('express');
-var cors = require('cors');
+const express = require('express');
+const cors = require('cors');
 var bodyParser = require('body-parser');
-var app = express();
+const app = express();
 const db = require("./models");
-var PORT = process.env.PORT || 3001;
+const mysql = require('mysql');
+const PORT = process.env.PORT || 3001;
+
+
+
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "sevilla08",
+//   database: "userdb"
+// });
+
+// connection.connect(function (err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+// });
+
 
 var routes = require('./routes');
 
@@ -15,7 +31,10 @@ app.use(
   })
 )
 
-if(process.env.NODE_ENV === "production"){
+
+
+
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
@@ -24,17 +43,19 @@ app.use(routes);
 
 db.sequelize
   .sync()
-  .then(function() {
+  .then(function () {
     // ...then start web server
-    app.listen(PORT, function(err) {
+    app.listen(PORT, function (err) {
       if (err) {
         return console.log(err);
       }
       console.log(`Server now running on http://localhost:${PORT}!`);
     });
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log(err, "Something went wrong with the db sync!");
   });
 
-  //Test comments for Mike
+//Test comments for Mike
+
+
