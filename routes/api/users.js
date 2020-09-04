@@ -34,7 +34,7 @@ router.post('/tutor', (req, res) => {
           userData.password = hash
           User.create(userData)
             .then(user => {
-              res.json({ status: user.email + 'Registered!' })
+              res.status(200).json({ message: 'Registered!' })
             })
             .catch(err => {
               res.send('error: ' + err);
@@ -77,7 +77,7 @@ router.post('/student', (req, res) => {
           userData.password = hash
           User.create(userData)
             .then(user => {
-              res.json({ status: user.email + 'Registered!' })
+              res.status(200).json({ message: 'Registered!' })
             })
             .catch(err => {
               res.send('error: ' + err);
@@ -107,11 +107,12 @@ router.post('/login', (req, res) => {
           res.send(token)
         }
       } else {
-        res.status(400).json({ error: 'User does not exist' });
+        res.status(400).json({ message: 'User does not exist' });
       }
     })
     .catch(err => {
       res.status(400).json({ error: err });
+
     })
 })
 
