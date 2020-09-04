@@ -54,7 +54,7 @@ class Student extends Component {
         registerS(newUser).then(res => {
             this.props.history.push(`/login`)
 
-        }).catch(({ response }) => console.log(response.data))
+        }).catch(({ response }) => alert(response.data.message))
     }
 
     render() {

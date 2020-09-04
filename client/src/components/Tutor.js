@@ -52,7 +52,7 @@ class Tutor extends Component {
         // register user on submit and send to the login page
         registerT(newUser).then(res => {
             this.props.history.push(`/login`)
-        }).catch(({ response }) => console.log(response.data))
+        }).catch(({ response }) => alert(response.data.message))
     }
 
     render() {
