@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { registerT } from './UserFunctions';
 
-
 class Tutor extends Component {
     constructor() {
         super()
@@ -20,6 +19,7 @@ class Tutor extends Component {
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
+
 
     // setting our state on change
     onChange(e) {
@@ -52,7 +52,7 @@ class Tutor extends Component {
         // register user on submit and send to the login page
         registerT(newUser).then(res => {
             this.props.history.push(`/login`)
-        })
+        }).catch(({ response }) => alert(response.data.message))
     }
 
     render() {

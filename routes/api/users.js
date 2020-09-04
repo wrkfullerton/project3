@@ -43,7 +43,7 @@ router.post('/tutor', (req, res) => {
             })
         })
       } else {
-        res.json({ error: 'User already exists' });
+        res.status(409).json({ message: 'User already exists' });
       }
     })
     .catch(err => {
@@ -86,7 +86,7 @@ router.post('/student', (req, res) => {
             })
         })
       } else {
-        res.json({ error: 'User already exists' });
+        res.status(409).json({ message: 'User already exists' });
       }
     })
     .catch(err => {
