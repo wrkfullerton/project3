@@ -37,16 +37,28 @@ app.get('/users', (req, res) => {
 });
 
 
-//Router to GET specific user detail from the MySQL database
+//Router to GET specific profile detail from the MySQL database
 
-// app.get('/users/profile', (req, res) => {
-//     mysqlConnection.query('SELECT * FROM Users WHERE user_profile = ?', [req.params.profile], (err, rows, fields) => {
-//         if (!err)
-//             res.send(rows);
-//         else
-//             console.log(err);
-//     })
-// });
+app.get('/teachers', (req, res) => {
+    mysqlConnection.query('SELECT * FROM Users WHERE profile = "teacher"', [req.params.profile], (err, rows, fields) => {
+        if (!err)
+            res.send(rows);
+        else
+            console.log(err);
+    })
+});
+
+//Router to GET specific subject detail from the MySQL database
+
+
+app.get('/subject', (req, res) => {
+    mysqlConnection.query('SELECT * FROM Users WHERE subject = "math"', [req.params.profile], (err, rows, fields) => {
+        if (!err)
+            res.send(rows);
+        else
+            console.log(err);
+    })
+});
 
 
 
