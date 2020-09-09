@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { Avatar, Button } from "@material-ui/core";
+import { Avatar, Button, IconButton } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link, withRouter } from 'react-router-dom';
 import "../styles/Navbar.css";
 class Landing extends Component {
+
   // sends user back to landing page after pressing logout
   logOut(e) {
     e.preventDefault();
     localStorage.removeItem('usertoken');
     this.props.history.push(`/`);
   }
-
+  
   render() {
+    
     // sends user to the register page once clicked
     const loginRegLink = (
       <ul className="navbar-nav">
@@ -43,11 +45,7 @@ class Landing extends Component {
             Your Charts
           </Link>
         </li> */}
-        <li className="nav-item">
-          <Link to="/matches" className="nav-link">
-            Matches
-          </Link>
-        </li>
+      
         <li className="nav-item">
           <Link to="/profile" className="nav-link">
             Profile
@@ -68,6 +66,15 @@ class Landing extends Component {
           <img src="favicon2.ico" width="30" height="30" className="d-inline-block align-top mr-2" alt=""></img>
             TutorNet
         </a>
+
+
+            <div className="navbar__center">
+             <input type="text"/>
+             <IconButton onClick={() => this.props.history.push('/search')}>
+             <SearchIcon className="navbar__search"/>
+             </IconButton>
+           </div>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -79,6 +86,7 @@ class Landing extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
+
 
         <div
           className="collapse navbar-collapse"
@@ -111,9 +119,6 @@ export default withRouter(Landing);
 
 // function Navbar() {
 //   const history = useHistory();
-
-
-//   console.log("USER IS >>> ", user);
 
 //     return (
 //         <div className="navbar">
