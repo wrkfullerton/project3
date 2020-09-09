@@ -14,74 +14,76 @@ function SearchPage() {
                 <Button variant="outlined">Tutor Rating</Button>
                 <Button variant="outlined">Price Range</Button>
                 <Button variant="outlined">In Person or Virtual</Button>
-                
+
                 <Button variant="outlined">More Filters</Button>
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C5603AQF1ERsfuOr95w/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=bmBmci7hpRweUD7DPr8I04rtVqMlGIGHiqCNKE_dq7U" 
+
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C5603AQF1ERsfuOr95w/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=bmBmci7hpRweUD7DPr8I04rtVqMlGIGHiqCNKE_dq7U"
                     location=""
-                    tutor="Seulki" 
+                    tutor="Seulki"
                     description="Will work with you either in person or distance learning."
-                    subject="Computer Science" 
+                    subject="Computer Science"
                     star={4.73}
                     price="$50.00"
                     total="$100.00"
                 />
-                
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C5103AQGaK0KhW4ipGw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=lD0c0W7LJBwyVIkW5J810NV9VDBILl6BgskKRQ4DGTU" 
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C5103AQGaK0KhW4ipGw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=lD0c0W7LJBwyVIkW5J810NV9VDBILl6BgskKRQ4DGTU"
                     location=""
-                    tutor="Kurt" 
+                    tutor="Kurt"
                     description="Will work with you either in person or distance learning."
-                    subject="History" 
+                    subject="History"
                     star={4.73}
                     price="$50.00"
                     total="$100.00"
                 />
-                
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C4E03AQGeHiQPi8oPqA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=Gd-AM0Fohdt_6aeZMjW4OGcgtIP_eVXeh2jjSXF6vRA" 
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQGeHiQPi8oPqA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=Gd-AM0Fohdt_6aeZMjW4OGcgtIP_eVXeh2jjSXF6vRA"
                     location=""
-                    tutor="Eddie" 
+                    tutor="Eddie"
                     description="Will work with you either in person or distance learning."
-                    subject="Spanish" 
+                    subject="Spanish"
                     star={4.73}
                     price="$50.00"
                     total="$100.00"
                 />
-                
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C4E03AQES1Z6_xMmarA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=J_DbYTzSuJ92P3TtCQvFeb5qx1LbYq1IrVHBoHXOtDo" 
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQES1Z6_xMmarA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=J_DbYTzSuJ92P3TtCQvFeb5qx1LbYq1IrVHBoHXOtDo"
                     location=""
-                    tutor="Will" 
+                    tutor="Will"
                     description="Will work with you either in person or distance learning."
-                    subject="Economics" 
+                    subject="Economics"
                     star={4.63}
                     price="$45.00"
                     total="$90.00"
                 />
-                
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C5603AQEX2lvVAE_mjA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=LWWqtNFbCOjMW_FqDffF1Z2rwDUYJJoda-sLX3ix2u4" 
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C5603AQEX2lvVAE_mjA/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=LWWqtNFbCOjMW_FqDffF1Z2rwDUYJJoda-sLX3ix2u4"
                     location=""
-                    tutor="Meg" 
+                    tutor="Meg"
                     description="Will work with you either in person or distance learning."
-                    subject="English" 
+                    subject="English"
                     star={4.83}
                     price="$45.00"
                     total="$90.00"
                 />
-                
-                <SearchResult 
-                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGxvuy0lTEzZw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=N0KxLBtQhAoFuroC8ZjebciO9fiPOOzDnjloBsfgY_g" 
+
+                <SearchResult
+                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGxvuy0lTEzZw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=N0KxLBtQhAoFuroC8ZjebciO9fiPOOzDnjloBsfgY_g"
                     location=""
-                    tutor="Peter" 
+                    tutor="Peter"
                     description="Will work with you either in person or distance learning."
-                    subject="Math" 
+                    subject="Math"
                     star={4.50}
                     price="$45.00"
                     total="$90.00"
                 />
-                
+
             </div>
         </div>
     )

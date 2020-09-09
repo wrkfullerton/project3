@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 
 function Search() {
     const history = useHistory();
-    const [startDate, setStartDate] = useState(new Date ());
+    const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
     const selectionRange = {
@@ -25,7 +25,7 @@ function Search() {
 
     return (
         <div className="search">
-            <DateRangePicker ranges={[selectionRange]} onChange={handleSelect}/>
+            <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
             <h5>Number of Hour(s)</h5>
             <PeopleIcon />
             <input min={0} defaultValue={1} type="number" />

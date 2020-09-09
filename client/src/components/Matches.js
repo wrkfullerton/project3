@@ -28,7 +28,7 @@ class Matches extends Component {
 
         return (
 
-            ///
+
             <div>
                 <div>
                     <h1>Matches</h1>
