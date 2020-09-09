@@ -22,7 +22,7 @@ mysqlConnection.connect((err) => {
 
 //Establish the server connection
 //PORT ENVIRONMENT VARIABLE
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}..`));
 
 //Creating GET Router to fetch all the Users details from the MySQL Database
@@ -59,6 +59,15 @@ app.get('/subject', (req, res) => {
             console.log(err);
     })
 });
+
+
+
+// let sql = "SELECT * FROM Users WHERE subject = math";
+
+// pool.query(sql, (err, res, cols) => {
+//     if (err) throw err;
+//     console.log(res);
+// });
 
 
 
