@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../styles/Profile.css";
 import jwt_decode from 'jwt-decode';
 
 class Profile extends Component {
