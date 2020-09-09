@@ -4,6 +4,8 @@ INSERT INTO users (id, first_name, last_name, email, password, profile, grade, s
 
 VALUES 
 
+-- mysql gives error of rows not matching up with the data, bandaid with id of 0 for all seeds, need to revist.
+
 ("0", "Vidal", "Salazar", "v.salazar@tutor.net","password100", "teacher", "High", "math", now()),
 
 ("0", "James", "Martinez", "j.martinez@tutor.net", "password101", "teacher", "Middle", "math", now()),

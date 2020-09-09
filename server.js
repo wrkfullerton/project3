@@ -8,19 +8,6 @@ const PORT = process.env.PORT || 3001;
 
 
 
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "sevilla08",
-//   database: "userdb"
-// });
-
-// connection.connect(function (err) {
-//   if (err) throw err;
-//   console.log("Connected!");
-// });
-
-
 var routes = require('./routes');
 
 app.use(bodyParser.json())
