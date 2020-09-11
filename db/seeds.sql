@@ -1,4 +1,4 @@
-USE userDB;
+USE userdb;
 
 INSERT INTO users (id, first_name, last_name, email, password, profile, grade, subject, created)
 
