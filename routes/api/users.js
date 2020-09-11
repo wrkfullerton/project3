@@ -101,19 +101,20 @@ router.post('/login', (req, res) => {
     }
   })
     .then(user => {
-      if (user) {
-        if (bcrypt.compareSync(req.body.password, user.password)) {
-          let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
-            expiresIn: 1440
-          })
-          res.send(token)
-        }
-      } else {
-        res.status(400).json({ message: 'User does not exist' });
+      if (!user) {
+        res.status(400).json({ message: 'User does not exist' })
+      } else if (bcrypt.compareSync(req.body.password, user.password)) {
+        let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
+          expiresIn: 1440
+        })
+        res.send(token)
+      }
+      else {
+        res.status(400).json({ message: 'Password was incorrect' });
       }
     })
     .catch(err => {
-      res.status(400).json({ error: err });
+      res.status(500).json({ message: 'Something went wrong' });
 
     })
 })
