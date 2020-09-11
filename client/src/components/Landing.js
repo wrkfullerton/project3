@@ -98,13 +98,15 @@
 
 // export default Landing;
 
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
+
 import "../styles/Landing.css"
 import Banner from "./Banner";
 import Card from "./Card";
 import { Link, useParams } from 'react-router-dom';
-import { useStateValue } from '../StateProvider';
-import { IconButton } from '@material-ui/core';
+// import { useStateValue } from '../StateProvider';
+// import { IconButton } from '@material-ui/core';
 
 class Landing extends Component {
     render() {
@@ -155,4 +157,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing
+export default Landing;

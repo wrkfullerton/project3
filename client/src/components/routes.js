@@ -42,7 +42,8 @@ app.get('/users', (req, res) => {
 app.get('/teachers', (req, res) => {
     mysqlConnection.query('SELECT * FROM Users WHERE profile = "teacher"', [req.params.profile], (err, rows, fields) => {
         if (!err)
-            res.send(rows);
+            // res.send(rows);
+            console.log(data);
         else
             console.log(err);
     })
