@@ -10,6 +10,9 @@
   },
   "author": "Will, Seulki, Eddie, Kurt",
   "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
