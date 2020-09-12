@@ -15,6 +15,7 @@ function TutorRegister({user}) {
 
     await axios.post("/api/v1/tutor/new", {
             src: user.photoURL,
+            email: user.email,
             tutor: user.displayName,
             description: description,
             subject: subject,

@@ -48,6 +48,7 @@ db.once('open', ()=> {
             pusher.trigger('tutors', 'inserted', {
                 src: tutorDetails.src,
                 tutor: tutorDetails.tutor,
+                email: tutorDetails.email,
                 description: tutorDetails.description,
                 subject: tutorDetails.subject,
                 price: tutorDetails.price,

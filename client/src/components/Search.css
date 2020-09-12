@@ -5,25 +5,25 @@
     width: 100vw;
    }
    
-   .search > h2 {
+   .search > h5 {
        display: flex;
        align-items: center;
        justify-content: space-between;
-       width: 559px;
+       width: 557px;
        padding: 10px;
        background-color: white;
        position: absolute;
        left: 0;
-       top: 380px;
+       /* top: 380px; */
    }
    
    .search > input {
-       width: 539px;
-       padding: 20px;
+       padding: 25px;
+       width: 557px;
        position: absolute;
        left: 0;
        height: 30px;
-       top: 430px;
+       top: 380px;
        border: none;
    }
    
@@ -34,11 +34,11 @@
    .search > button {
        position: absolute;
        left: 0;
-       top: 480px;
+       top: 430px;
        text-transform: inherit !important;
        background-color: #1075b6 !important;
        color: white !important;  
-       width: 579px;
+       width: 559px;
    }
    
    .search > button:hover {

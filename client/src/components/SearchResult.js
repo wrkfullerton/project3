@@ -5,7 +5,7 @@ import "./SearchResult.css";
 
 function SearchResult({
     src, 
-    location, 
+    email, 
     tutor, 
     subject,
     description,
@@ -21,8 +21,8 @@ function SearchResult({
         
             <div className="searchResult__info">
                 <div className="searchResult__infoTop">
-                <p>{location}</p>
                 <h3>{tutor}</h3>
+                <p>{email}</p>
                 <p>{subject}</p>
                 <p>____</p>
                 <p>{description}</p>

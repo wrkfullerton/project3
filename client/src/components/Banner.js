@@ -17,8 +17,8 @@ function Banner() {
 
             <div className="banner__info">
             
-                <h1>Get out and strech your imagination</h1>
-                <h5>Plan a different kind of getaway to uncover the hidden gems near you.</h5>
+                <h3>Get out and strech your imagination</h3>
+                <h5>Get a tutor and make deposits into your future.</h5>
                 
                 <Button onClick={() => history.push('/search')} variant="outlined">Get Tutor</Button>
                 

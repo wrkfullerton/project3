@@ -2,9 +2,10 @@
  padding: 20px;   
 }
 
-.searchPage__info > p {
+.searchPage__info > h5 {
     margin-bottom: 10px;
     font-size: 14px;
+    padding-left: 20px;
 }
 
 .searchPage__info > h1 {
