@@ -30,15 +30,9 @@ function SearchResult({
                 </div>
 
                 <div className="searchResult__infoBottom">
-                <div className="searchResult__stars">
-                <StarIcon className="searchResult__star"/>
-                <p>
-                <strong>{star}</strong>
-                </p>
-                </div>
+            
                 <div className="searchResults__price">
                     <h2>{price}/ hour</h2>
-                    <p>{total} total</p>
                 </div>
                 </div>
             </div>
