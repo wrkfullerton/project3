@@ -4,26 +4,34 @@ import Tutors from "./dbTutors.js";
 import Pusher from 'pusher';
 import cors from 'cors';
 
+import dotenv from 'dotenv';
+
+dotenv.config()
+
 // app config
 const app = express();
 const port = process.env.PORT || 9001
 
+
+const pusherKey = process.env.pusherKey
+const pusherSK = process.env.pusherSK
+
 const pusher = new Pusher({
   
   appId: "1071562",
-  key: "981264040b512ba39a38",
-  secret: "845977faf20054107f65",
+  key: pusherKey,
+  secret: pusherSK,
   cluster: "us2"
 
   });
-
+    
 // // middleware
 app.use(express.json())
 app.use(cors())
 
 // /// DB config
 
-const connection_url = "mongodb+srv://admin:njg4dgykGCMoM37t@cluster0.xzhgw.mongodb.net/tutornetdb?retryWrites=true&w=majority";
+const connection_url = process.env.MONGODB_URI
 
 mongoose.connect(connection_url, {
     useCreateIndex: true,
