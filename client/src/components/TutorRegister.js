@@ -1,32 +1,34 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import "./TutorRegister.css";
-import db from '../firebase';
+import axios from "../axios";
+import { useHistory } from "react-router-dom";
 
-
-
-function TutorRegister() {
+function TutorRegister({user}) {
+    const history = useHistory();
     const [description, setDescription] = useState("");
     const [subject, setSubject] = useState("");
     const [price, setPrice] = useState("");
 
 
-    const registerTutor = (e) => {
+    const registerTutor = async (e) => {
         e.preventDefault();
 
-        // db.collection('tutors'). {
-        //     src: user.photoURL,
-        //     tutor: user.displayName,
-        //     description: description,
-        //     subject: subject,
-        //     price: price
-        // });
+    await axios.post("/api/v1/tutor/new", {
+            src: user.photoURL,
+            tutor: user.displayName,
+            description: description,
+            subject: subject,
+            price: price,
+        });
 
-        
+        setDescription("");
+        setSubject("");
+        setPrice("");
+
+        history.push('/search');
     }
 
-    setDescription("");
-    setSubject("");
-    setPrice("");
+    
 
     return (
         <div className="tutor">

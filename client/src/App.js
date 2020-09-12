@@ -57,7 +57,7 @@ function App() {
           
 
             <Route path="/tutor/register">
-              <TutorRegister/>
+              <TutorRegister user={user}/>
             </Route>
 
             <Route path="/search">
