@@ -1,55 +1,84 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
-import Footer from "./components/Footer";
-import Landing from './components/Landing';
-import Login from './components/Login';
-import ProfilePage from "./components/ProfilePage";
-import ContactPage from "./components/ContactPage";
-import Register from './components/Register';
-import Profile from './components/Profile';
-import Dashboard from './components/Dashboard';
-import Student from './components/Student';
-import Tutor from './components/Tutor';
+import React, {useState, useEffect} from 'react';
+import './App.css';
+import Home from "./components/Home";
 import SearchPage from "./components/SearchPage";
-import Matches from './components/Matches';
-import "../src/styles/Landing.css"
+import Header from "./components/Header";
+import Login from "./components/Login";
+import StudentSignIn from "./components/StudentSignIn";
+import TutorSignIn from "./components/TutorSignIn";
+import Footer from "./components/Footer";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { useStateValue } from './StateProvider';
+import Pusher from "pusher-js";
+import axios from './axios';
+
+function App() {
+  // const [{ user }, dispatch] = useStateValue();
+  const [tutors, setTutors] = useState([]);
+  
+  useEffect(() => {
+    axios.get('/api/v1/tutor/sync')
+    .then(response => {
+      setTutors(response.data);
+    })
+  }, []);
+  
+  useEffect(() => {
+    const pusher = new Pusher('981264040b512ba39a38', {
+      cluster: 'us2',
+    });
 
 
-class App extends Component {
+    const channel = pusher.subscribe("tutor");
+    channel.bind("inserted", (newTutor) => {
+      setTutors([...tutors, newTutor])
+    });
 
-    render() {
-        return (
-            <Router>
-                <div className="App">
-                    <Navbar />
-                    <Route exact path="/" component={Landing} />
-                    <Route exact path="/register" component={Register} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/profile" component={Profile} />
-                    <Route exact path="/profilepage" component={ProfilePage} />
-                    <Route exact path="/tutor/:tutor" component={ContactPage}/>
-                    <Route exact path="/dashboard" component={Dashboard} />
-                    <Route exact path="/matches" component={Matches} />
-                    <Route exact path="/student" component={Student} />
-                    <Route exact path="/tutor" component={Tutor} />
-                    <Route exact path="/search" component={SearchPage} />
-                    
-                    <Footer />
-                </div>
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    };
+  }, [tutors]);
 
-            </Router>
-        )
-    }
+  console.log(tutors)
 
-    constructor() {
-        super();
-        this.state = {
-            chartData: {}
-        }
-    }
+  return (
+    <div className="app">
+      
+      {/* {!user ? (
+        <Login />
+      ) : ( */}
+      <Router>
+        <Header/>
+        <Switch>
+            <Route path="/student/signin">
+              <StudentSignIn/>
+            </Route>
+          
 
+            <Route path="/tutor/register">
+              <TutorSignIn/>
+            </Route>
+
+            <Route path="/search">
+              <SearchPage tutors={tutors}/>
+            </Route>
+
+            <Route path="/login">
+              <Login />
+            </Route>
+
+
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        <Footer />
+      </Router>
+      {/* )} */}
+    </div>
+
+  );
 }
 
 export default App;

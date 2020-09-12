@@ -1,82 +1,35 @@
-import React, { Component } from 'react';
-import { login } from './UserFunctions';
+import React from 'react';
+import { Button } from "@material-ui/core";
+import "./Login.css";
+import { auth, provider } from '../firebase';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
 
-class Login extends Component {
-  constructor() {
-    super()
-    this.state = {
-      email: '',
-      password: '',
-      errors: {}
-    }
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-  onSubmit(e) {
-    e.preventDefault();
-
-    const user = {
-      email: this.state.email,
-      password: this.state.password
-    }
-
-    // sends the user to the profile page once logged in
-    login(user).then(res => {
-      if (res) {
-        this.props.history.push(`/`);
-      }
-    })
-  }
-
-  render() {
+function Login() {
+    // const [{}, dispatch] = useStateValue();
+    // const signIn = () => {
+    //     auth
+    //     .signInWithPopup(provider)
+    //     .then((result) => {
+    //         dispatch({
+    //             type: actionTypes.SET_USER,
+    //             user: result.user,
+    //         });
+    //     })
+    //         .catch((error) => alert(error.message));
+    // };
     return (
-      <div className="main">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5 mt-5 mx-auto">
-              <form noValidate onSubmit={this.onSubmit}>
-                <br></br>
-                <h1 className="h3 mb-3 font-weight-normal">Sign in to your account</h1>
-                <div className="form-group">
-                  <label htmlFor="email">Email address:</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    name="email"
-                    placeholder="Enter email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">Password:</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    placeholder="Password"
-                    value={this.state.password}
-                    onChange={this.onChange}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-lg btn-primary btn-block"
-                >
-                  Sign in
-                    </button>
-              </form>
-            </div>
-          </div>
+        <div className="login">
+        <div className="login__container">
+            <img src="https://watermark.ventures/wp-content/uploads/2020/09/TutorNet-Logo.png" />
+            
+        <div className="login__text">
+            <h1>Sign in to TutorNet</h1>
         </div>
-      </div>
+        {/* <Button onClick={signIn}>Sign In With Google</Button> */}
+        </div>
+        </div>
     )
-  }
 }
 
-export default Login;
+export default Login

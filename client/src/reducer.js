@@ -1,37 +1,23 @@
 export const initialState = {
-    tutorCard: [],
+    user: null,
+};
+
+export const actionTypes = {
+    SET_USER: "SET_USER",
 };
 
 const reducer = (state, action) => {
-    console.log(action); 
-    switch(action.type) {
-        case "VIEW_TUTOR":
-            // logic for viewing tutor
+    console.log(action);
+    switch (action.type) {
+        case actionTypes.SET_USER:
             return {
-            ...state,
-            tutorCard: [...state.tutorCard, action.item],
-        };
+                ...state,
+                user: action.user,
+            };
 
-        case 'REMOVE_TUTOR_STATE':
-
-        let newTutor = [...state.tutorCard];
-
-        const index = state.tutorCard.findIndex(
-            (tutorCardItem) => tutorCardItem.id === action.id
-        );
-
-        if (index >= 0) {
-            newTutor.splace(index, 1);
-        } else {
-            console.warn(
-                'Cant remove Tutor (id: ${action.id}) as its not found.'
-            );
-        }
-        return { ...state, tutorCard: newTutor };
-            
-            default:
-                return state;
-        }
+            default: 
+            return state;
     }
-        
+};
+
 export default reducer;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "@material-ui/core";
 import PeopleIcon from "@material-ui/icons/People";
-import "../styles/Search.css";
+import "./Search.css";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from 'react-date-range';
@@ -26,7 +26,7 @@ function Search() {
     return (
         <div className="search">
             <DateRangePicker ranges={[selectionRange]} onChange={handleSelect}/>
-            <h5>Number of Hour(s)</h5>
+            <h2>Number of Hour(s)</h2>
             <PeopleIcon />
             <input min={0} defaultValue={1} type="number" />
             <Button onClick={() => history.push('/search')}>Search TutorNet</Button>
