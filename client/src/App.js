@@ -5,15 +5,15 @@ import SearchPage from "./components/SearchPage";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import StudentSignIn from "./components/StudentSignIn";
-import TutorSignIn from "./components/TutorSignIn";
+import TutorRegister from "./components/TutorRegister";
 import Footer from "./components/Footer";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import { useStateValue } from './StateProvider';
+import { useStateValue } from './StateProvider';
 import Pusher from "pusher-js";
 import axios from './axios';
 
 function App() {
-  // const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const [tutors, setTutors] = useState([]);
   
   useEffect(() => {
@@ -45,9 +45,9 @@ function App() {
   return (
     <div className="app">
       
-      {/* {!user ? (
+      {!user ? (
         <Login />
-      ) : ( */}
+      ) : (
       <Router>
         <Header/>
         <Switch>
@@ -57,7 +57,7 @@ function App() {
           
 
             <Route path="/tutor/register">
-              <TutorSignIn/>
+              <TutorRegister/>
             </Route>
 
             <Route path="/search">
@@ -75,7 +75,7 @@ function App() {
           </Switch>
         <Footer />
       </Router>
-      {/* )} */}
+      )}
     </div>
 
   );

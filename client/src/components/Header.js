@@ -4,9 +4,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Link, useHistory } from "react-router-dom";
+import { useStateValue } from '../StateProvider';
 import "./Header.css";
 
 function Header() {
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className="header">
             <Link to="/">
@@ -26,7 +28,7 @@ function Header() {
             </Link>
             <LanguageIcon/>
             <ExpandMoreIcon/>
-            <Avatar />
+            <Avatar src={user.photoURL}/>
             </div>
         </div>
 

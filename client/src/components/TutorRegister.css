@@ -1,4 +1,4 @@
-.login {
+.tutor {
     background-color: #f8f8f8;
     height: 100vh;
     width: 100vw;
@@ -6,7 +6,7 @@
     place-items: center;
 }
 
-.login__container {
+.tutor__container {
     padding: 100px;
     text-align: center;
     background-color: white;
@@ -14,21 +14,45 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px;
 }
 
-.login__container > img {
-    object-fit: contain;
-    height: 100px;
-    margin-bottom: 40px;
+.tutor__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
 }
 
-.login__container > button {
+.tutor__form > img {
+    object-fit: contain;
+    margin: auto;
+    height: 100px;
+}
+
+
+.tutor__form > h2 {
+ padding: 10px;   
+}
+
+.tutor__form > input {
+    /* border: none; */
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+}
+
+.tutor__form > button {
     padding: 10px;
     border-radius: 20px;
     color: white;
     margin: auto;
     background-color: cornflowerblue;
     font-weight: 800;
-    margin-top: 50px;
+    width: 100px;
     margin-bottom: 20px;
 
 }
+
+
 
